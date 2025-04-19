@@ -44,16 +44,16 @@ public class ItemPiking : MonoBehaviour
                         Debug.Log("EEE");
                         GetPrefab(pickedObject.gameObject);
                         Debug.Log("EEE");
-                        ObjectPrefab objectPrefab = prefab.GetComponent<ObjectPrefab>();
+                        ObjectPrefab objectPrefabW = prefab.GetComponent<ObjectPrefab>();
                         if (inventory.weapon1 == null)
                         {
-                            objectPrefab.GetPlaceInInventory(1);
+                            objectPrefabW.GetPlaceInInventory(1);
                             inventory.weapon1 = prefab;
                             Destroy(pickedObject);
                         }
                         else if (inventory.weapon2 == null)
                         {
-                            objectPrefab.GetPlaceInInventory(2);
+                            objectPrefabW.GetPlaceInInventory(2);
                             inventory.weapon2 = prefab;
                             Destroy(pickedObject);
                         }
@@ -62,16 +62,26 @@ public class ItemPiking : MonoBehaviour
 
                     case "Throwable":
                         Debug.Log("Bruh");
+                        GetPrefab(pickedObject.gameObject);
+                        ObjectPrefab objectPrefabT = prefab.GetComponent<ObjectPrefab>();
                         if (inventory.weapon1 == null) 
                         {
-                            inventory.weapon1 = prefab; 
+                            objectPrefabT.GetPlaceInInventory(1);
+                            inventory.weapon1 = prefab;
+                            Destroy(pickedObject);
                         }
-                        else if (inventory.weapon2 == null) { inventory.weapon2 = prefab; }
+                        else if (inventory.weapon2 == null) 
+                        {
+                            objectPrefabT.GetPlaceInInventory(2);
+                            inventory.weapon2 = prefab;
+                            Destroy(pickedObject);
+                        }
                         else 
                         {
                             if (inventory.inHandObject != null)
                             {
                                 Destroy(inventory.inHandObject);
+                                inventory.inHandObject = prefab;
                                 GameObject thrownObject = Instantiate(inventory.inHandObject, inventory.inHandPosition.position, Quaternion.identity);
                             }
                             inventory.inHandObject = pickedObject;

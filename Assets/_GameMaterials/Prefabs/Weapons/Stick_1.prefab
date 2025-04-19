@@ -306,6 +306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: Stick_1
   PlaceInInventory: 0
+  Enemy_Player: 
 --- !u!136 &3266382111487630744
 CapsuleCollider:
   m_ObjectHideFlags: 0

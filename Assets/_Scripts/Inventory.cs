@@ -64,21 +64,21 @@ public class Inventory : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha0)) { Destroy(inHandObject); inHandObject = null; }
         
-        if (Input.GetKeyDown(KeyCode.Alpha1) && (inHandObject == null || !inHandObject.CompareTag("Throwable")) && weapon1 != null)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && inHandObject == null && weapon1 != null)
         {
             GettingRigitbody();
             weapon1RB.isKinematic = true;
             if (weapon2 != null) { weapon2RB.isKinematic = false; }
             SpawnCoordinates(weapon1);
-        } else if (inHandObject != null && inHandObject.CompareTag("Throwable")) { DropItem(); }
+        } 
 
-        if (Input.GetKeyDown(KeyCode.Alpha2) && (inHandObject == null || !inHandObject.CompareTag("Throwable")) && weapon2 != null)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && inHandObject == null && weapon2 != null)
         {
             GettingRigitbody();
             weapon2RB.isKinematic = true;
             if (weapon1 != null) { weapon1RB.isKinematic = false; }
             SpawnCoordinates(weapon2);
-        } else if (inHandObject != null && inHandObject.CompareTag("Throwable")) { DropItem(); }
+        } 
 
         if (Input.GetKeyDown(KeyCode.Alpha3) && (inHandObject == null || inHandObject.CompareTag("SlingShot")))
         {

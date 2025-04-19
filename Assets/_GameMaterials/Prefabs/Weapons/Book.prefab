@@ -302,3 +302,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: Book
   PlaceInInventory: 0
+  Enemy_Player: 
