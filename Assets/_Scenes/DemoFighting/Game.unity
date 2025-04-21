@@ -14460,6 +14460,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrashBin
       objectReference: {fileID: 0}
+    - target: {fileID: 4331592184764377054, guid: f57b4a035f8e53c4cb8f58defc87e93e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6380213862342031465, guid: f57b4a035f8e53c4cb8f58defc87e93e, type: 3}
       propertyPath: m_Size.x
       value: 0.02443749

@@ -78,14 +78,17 @@ public class ItemPiking : MonoBehaviour
                         }
                         else 
                         {
-                            if (inventory.inHandObject != null)
+                            if (inventory.inHandObject == null)
                             {
-                                Destroy(inventory.inHandObject);
                                 inventory.inHandObject = prefab;
-                                GameObject thrownObject = Instantiate(inventory.inHandObject, inventory.inHandPosition.position, Quaternion.identity);
+                                Rigidbody inHandRB = inventory.inHandObject.GetComponent<Rigidbody>();
+                                inHandRB.isKinematic = true;
+                                Debug.Log("1");
+                                inventory.SpawnCoordinates(inventory.inHandObject);
+                                Debug.Log("2");
+                                Destroy(pickedObject);
                             }
-                            inventory.inHandObject = pickedObject;
-                            inventory.SpawnCoordinates(pickedObject); 
+                            
                         }
                         Debug.Log("hurB");
                         break;

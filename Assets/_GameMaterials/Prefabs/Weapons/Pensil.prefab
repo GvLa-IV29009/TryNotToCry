@@ -191,3 +191,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: Pensil
   PlaceInInventory: 0
+  Enemy_Player: 

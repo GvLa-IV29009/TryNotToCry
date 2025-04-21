@@ -188,5 +188,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: Ruler
-  PlaceInInventory: 1
+  PlaceInInventory: 0
   Enemy_Player: 

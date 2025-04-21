@@ -52,8 +52,8 @@ public class Weapons : MonoBehaviour
     {
         yield return new WaitForSeconds(0.75f);
 
-        Destroy(inventory.inHandObject);
         GameObject thrownObject = Instantiate(inventory.inHandObject, inventory.inHandPosition.position, Quaternion.identity);
+        Destroy(inventory.inHandObject);
 
         var thrownObjRigidBody = thrownObject.GetComponent<Rigidbody>();
         thrownObjRigidBody.isKinematic = false;

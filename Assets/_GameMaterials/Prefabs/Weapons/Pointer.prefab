@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: Pointer
-  PlaceInInventory: 1
+  PlaceInInventory: 0
   Enemy_Player: Player
 --- !u!54 &-4707763219747839228
 Rigidbody:

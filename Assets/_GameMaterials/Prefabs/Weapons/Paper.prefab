@@ -183,3 +183,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: Paper
   PlaceInInventory: 0
+  Enemy_Player: 

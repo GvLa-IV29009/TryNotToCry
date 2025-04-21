@@ -93,7 +93,6 @@ public class Inventory : MonoBehaviour
     }
     public void SpawnCoordinates(GameObject weapon)
     {
-        Destroy(inHandObject);
         inHandObject = Instantiate(weapon, inHandPosition.position, Quaternion.identity, inHandPosition);
 
         WeaponRotation rotation = inHandObject.GetComponent<WeaponRotation>();
